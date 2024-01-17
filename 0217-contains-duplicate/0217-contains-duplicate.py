@@ -1,9 +1,10 @@
 class Solution(object):
     def containsDuplicate(self, nums):
-        numbers= set()
+        num_dict={}
         for num in nums:
-            if num in numbers:
+            if num in num_dict:
                 return True
-            numbers.add(num)
+            num_dict[num] = 1
         return False
             
+        
