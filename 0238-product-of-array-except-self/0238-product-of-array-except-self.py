@@ -13,4 +13,3 @@ class Solution(object):
             suffix_product *= nums[i]
         result = [prefix_products[i] * suffix_products[i] for i in range(n)]
         return result
-            
