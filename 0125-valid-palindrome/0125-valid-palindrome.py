@@ -1,12 +1,10 @@
 class Solution(object):
     def isPalindrome(self, s):
-        final_s =[]
-        new_s = s.lower().split()
-        for char in new_s:
-                for letter in char:
-                    if letter.isalnum():
-                        final_s.append(letter)
-
-        final = "".join(final_s).replace(',', "")
-        return final == final[::-1]
+        new_s= ""
+        for i in s:
+            if i.isalnum():
+                new_s += i
+        final_s= new_s.lower()
+        return final_s == final_s[::-1]
+            
         
