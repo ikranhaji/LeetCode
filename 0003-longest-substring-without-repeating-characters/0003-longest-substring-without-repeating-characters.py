@@ -1,14 +1,13 @@
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
-        longest_substring= ''
-        current_substring= ''
+        longest_word = ""
+        current_word = ""
         for char in s:
-            if char not in current_substring:
-                current_substring += char
-                if len(current_substring) > len(longest_substring):
-                    longest_substring = current_substring
+            if char not in current_word:
+                current_word += char
+                if len(current_word) > len(longest_word):
+                    longest_word = current_word
             else:
-                index = current_substring.index(char)
-                current_substring = current_substring[index +1:] + char
-
-        return len(longest_substring)
+                index = current_word.index(char)
+                current_word = current_word[index + 1 :] + char
+        return len(longest_word)
